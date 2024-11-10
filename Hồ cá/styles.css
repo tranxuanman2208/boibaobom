@@ -5,7 +5,7 @@
 }
 
 .container{
-    background-image: url(/container/water.jpg);
+    background-image: url(../container/water.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -203,7 +203,7 @@
     height: 60px;
     display: block;
     border-radius: 50%;
-    background: url(/container/imgmusic.jpg);
+    background: url(../container/imgmusic.jpg);
     object-fit: cover;
     background-size: cover;
     animation: rotate 20s linear infinite;
