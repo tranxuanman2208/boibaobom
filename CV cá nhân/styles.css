@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height:600px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,1);
+    margin: 50px;
+}
+.container .left-side{
+    position: relative;
+    background-color:lightskyblue;
+    padding: 40px;
+}
+.container .right-side{
+    position: relative;
+    background-color:#fff;
+    padding: 40px;
+}
+.img{
+    border-radius: 200px;
+    width:180px;
+    height:180px;
+    object-fit: cover;
+    margin-left: 30px;  
+}
+.aboutme {
+    margin-top: 10px;
+}
+.contact{
+    margin-top: 15px;
+}  
+.Experience{
+    margin-top:20px;
+}

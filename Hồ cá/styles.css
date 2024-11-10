@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.container{
+    background-image: url(/container/water.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 230vh;
+    position: absolute;
+}
+.fish-container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.fish-container img{
+    position: absolute;
+    height: 150px;
+}
+.shark{
+    width: 300px;
+    height: 2000px;
+    top: 10%;
+    left: 0%;
+    animation: shark 13s linear infinite;
+}
+@keyframes shark{
+    0%{
+        left:0%;
+        transform: translateX(0%) rotateY(0deg);
+    }
+    50%{
+        left: 68%;
+        transform: translateX(68%) rotateY(0deg);
+    }
+    51%{
+        left:68%;
+        transform: translateX(68%) rotateY(180deg);
+    }
+    100%{
+        left: 0%;
+        transform: translateX(0%) rotateY(180deg);
+    }
+}
+.faintfish{
+    top: 30%;
+    left: 0%;
+    animation: faintfish 10s linear infinite;
+}
+@keyframes faintfish{
+    0%{
+        left:0%;
+        transform: translateX(0%) rotateY(0deg);
+    }
+    50%{
+        left: 65%;
+        transform: translateX(65%) rotateY(0deg);
+    }
+    51%{
+        left:65%;
+        transform: translateX(65%) rotateY(180deg);
+    }
+    100%{
+        left: 0%;
+        transform: translateX(0%) rotateY(180deg);
+    }
+}
+.goldfish{
+    top: 50%;
+    left: 0%;
+    animation: goldfish 11s linear infinite;
+}
+@keyframes goldfish{
+    0%{
+        left:0%;
+        transform: translateX(0%) rotateY(180deg);
+    }
+    50%{
+        left: 78%;
+        transform: translateX(78%) rotateY(180deg);
+    }
+    51%{
+        left:78%;
+        transform: translateX(78%) rotateY(0deg);
+    }
+    100%{
+        left: 0%;
+        transform: translateX(0%) rotateY(0deg);
+    }
+}
+.diver1{
+    top: 60%;
+    animation: diver1 13s linear infinite;
+}
+@keyframes diver1{
+    0%{
+        left:0%;
+        transform: translate(0%,0%) rotateY(180deg);
+    }
+    20%{
+        left: 35%;
+        transform: translate(35%,40%) rotateY(180deg);
+    }
+    40%{
+        left: 50%;
+        transform: translate(50%,-10%) rotateY(180deg);
+    }
+    50%{
+        left: 68%;
+        transform: translate(68%,40%) rotateY(180deg);
+    }
+    51%{
+        left: 68%;
+        transform: translate(68%,40%) rotateY(0deg);
+    }
+    60%{
+        left: 60%;
+        transform: translate(60%,-80%) rotateY(0deg);
+    }
+    80%{
+        left: 30%;
+        transform: translate(30%,50%) rotateY(0deg)
+    }
+    100%{
+        left: 0%;
+        transform: translate(0%,0%) rotateY(0deg);
+    }
+}
+.diver2{
+    top: 10%;
+    animation: diver2 16s linear infinite;
+}
+@keyframes diver2{
+    0%{
+        left:0%;
+        transform: translate(0%,0%) rotateY(0deg);
+    }
+    20%{
+        left: 35%;
+        transform: translate(35%,-60%) rotateY(0deg);
+    }
+    40%{
+        left: 50%;
+        transform: translate(50%,40%) rotateY(0deg);
+    }
+    50%{
+        left: 68%;
+        transform: translate(68%,-50%) rotateY(0deg);
+    }
+    51%{
+        left: 68%;
+        transform: translate(68%,-50%) rotateY(180deg);
+    }
+    60%{
+        left: 60%;
+        transform: translate(60%,70%) rotateY(180deg);
+    }
+    80%{
+        left: 30%;
+        transform: translate(30%,-40%) rotateY(180deg)
+    }
+    100%{
+        left: 0%;
+        transform: translate(0%,0%) rotateY(180deg);
+    }
+}
+.bubble{
+    top: 70%;
+    left: 30%;
+    width: 200px;
+    height: 200px;
+    animation: bubble 10s linear infinite;
+}
+@keyframes bubble{
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1);
+    }
+    40%{
+        transform: scale(0.5);
+    }
+    60%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.box-song{
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+    background: url(/container/imgmusic.jpg);
+    object-fit: cover;
+    background-size: cover;
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+.box-song.play{
+    animation-play-state: running;
+}
+.song-slider{
+    width:20%;
+    position: relative;
+    display: block;
+}
+.seek-bar{
+    margin-left: 20px;
+    -webkit-appearance: none;
+    width: 20%;
+    height: 5px;
+    border-radius: 10px;
+    background: lightblue;
+    cursor: pointer;
+    overflow: hidden;   
+}
+.seek-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 5px;
+    height: 5px;
+    background: #000;
+    box-shadow: -400px 0 0 400px #000;
+}
+
+.controls{
+    width: 100%;
+    display: flex;
+    margin-left:40px ;
+    margin-top: 5px;
+}
+.btn-play{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background-color:darkcyan;
+}
+.btn-play span{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 15px;
+    border-radius: 2px;
+    background: whitesmoke;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.btn-play span:nth-child(2){
+    left: 55%;
+    transform-origin: center;
+}
+.btn-play.pause span:nth-child(2){
+    transform: translateY(-50%) scaleY(0);
+}
+.btn-play.pause span:nth-child(1){
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+.btn-play.pause{
+    animation: pause 2s linear infinite;
+}
+@keyframes pause{
+    0%{
+        box-shadow: 0;
+    }
+    50%{
+        box-shadow: 0 0 0 5px rgba(255,255,255,0.1);
+    }
+    100%{
+        box-shadow: 0 0 0 5px rgba(255,255,255,0.4);
+    }
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
